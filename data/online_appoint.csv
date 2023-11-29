@@ -1,0 +1,1 @@
+online_appointmentId,date(YYYYMMDD),doctorId,patientId,startTime(in 24-hr format)

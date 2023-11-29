@@ -1,0 +1,2 @@
+appointmentId,date(YYYYMMDD),doctorId,patientId,startTime(in 24-hr format),if_online
+1,20231129,1,1,9,0

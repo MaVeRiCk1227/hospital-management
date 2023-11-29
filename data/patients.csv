@@ -1,0 +1,13 @@
+patientId,password,firstName,lastName,gender,age,mobNumber,address,height,weight,wasHospitalized?,bedID,stillAlive(ifHospitalized)?
+1,555555,G.,Sherry,M,68,+91xxxxxxxxxx,23-D^ Jillah Rd``Pune`Maharashtra`500021`India,165,130,Y,0,Y
+2,123456,Indira,Sharma,F,35,+91xxxxxxxxxx,62^ Andheri East``Mumbai`Maharashtra`400062`India,160,110,N,0,Y
+3,123456,Karan,Singh,M,39,+91xxxxxxxxxx,633-C^ Raheja Chamber`Nariman Point`Mumbai`Maharashtra`400021`India,178,150,N,0,Y
+4,123456,Aditya,Singh,M,12,+918776493058,128-D^ East Mumbai``Mumbai`Maharashtra`400069`India,179,140,Y,0,Y
+5,123456,Rohan,Khurana,M,10,+919378409294,29-D^ Andheri West``Mumbai`Maharashtra`400066`India,180,140,N,0,Y
+7,123456,Ailack,,F,16,+918398875564,62^ Andheri East``Mumbai`Maharashtra`400062`India,160,110,Y,0,Y
+8,123456,Jack,,M,33,+918876389406,23-D^ Amrita Nagar``Mumbai`Maharashtra`400013`India,168,130,N,0,Y
+9,123456,Selmon,Bhoi,M,45,+918838492048,23^ Galaxy Apartments^ MG Rd.``Mumbai`Maharashtra`400009`India,180,150,N,0,Y
+10,123456,Kim,John,M,24,+918753964875,23-D^ Jillah Rd``Pune`Maharashtra`500021`India,159,110,N,0,Y
+11,123456,Rauf,,M,88,+917456493023,ABC Street`Xyz Colony`Mumbai`Maharastra`-`India,164,120,Y,0,Y
+12,123456,Juhad Ali,Pathan,M,32,+918893029382,ABC Street``Mumbai`Maharashtra`-`India,176,145,N,1567694566,Y
+13,123456,Abhishek Upmanyu,Singh,M,34,+91XXXXXXXXXX,23-D^ Galaxy Apartments`XYZ Street^ 223-A`Mumbai`Maharashtra`-`India,178,140,N,0,Y

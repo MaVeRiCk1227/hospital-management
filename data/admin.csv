@@ -1,0 +1,8 @@
+admin_rootID,admin_name,admin_password,last_admin_time
+admin_chief,chief123456,2023-10-10
+admin_patient,patient123456,2023-10-10
+admin_doctor,doctor123456,2023-10-10
+admin_nurse,nurse123456,2023-10-10
+admin_driver,driver123456,2023-10-10
+admin_ambulance,ambulance123456,2023-10-10
+admin_bed,bed123456,2023-10-10

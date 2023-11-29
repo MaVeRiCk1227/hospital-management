@@ -1,0 +1,27 @@
+doctorId,password,firstName,lastName,gender,age,mobNumber,address,type,appointmentsBooked
+1,123456,John,Doe,M,43,+918765908974,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Cardiologist,1
+2,123456,Isabella,Cullen,F,28,+917645903894,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Physician,0
+3,123456,Rhea,Jain,F,29,+918930281749,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Cardiologist,1
+4,123456,Dhananjay,Dey,M,44,+919248930238,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Psychatrist,0
+5,123456,James,Carwin,M,38,+912849302394,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Neurologist,0
+7,123456,Mark,Andrew,M,32,+912394048304,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Psychatrist,0
+8,123456,Melinda,Andrew,F,44,+919204049034,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Cardiologist,0
+9,123456,Isabella,Carwin,F,29,+913489998309,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Psychatrist,0
+10,123456,Shaun,Murphy,M,45,+918907837486,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Psychatrist,0
+11,123456,Freddie,Johnson,M,29,+912233497837,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Neurologist,0
+12,123456,Regina,Phalange,F,29,+919086748935,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Physician,0
+13,123456,Ken,Adams,M,30,+919987998859,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Physician,0
+14,123456,Monica,Jain,F,32,+919999884758,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,ENT,0
+15,123456,Ryan,Mallick,M,34,+919999883748,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,ENT,0
+16,123456,Patrick,Stephens,M,39,+912347893048,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Neurologist,0
+17,123456,John,Markson,M,30,+912647893047,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Dermatologist,0
+18,123456,Vishal,Mallick,M,44,+911278903748,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Dentist,0
+19,123456,Vishal,Mallick,M,49,+918038495839,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Dermatologist,0
+20,123456,Kiara,Jain,F,39,+912389475683,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Dermatologist,0
+22,123456,Akshat,Kumar,M,29,+919847583027,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Surgeon,0
+23,123456,Akshay,Agrawal,M,32,+912983746590,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,ENT,0
+24,123456,William,Chadwick,M,39,+910937548903,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Surgeon,0
+25,123456,Rishabh,Jain,M,30,+913408759394,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Surgeon,0
+26,123456,Navya,Gupta,M,19,+913490000048,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Dentist,0
+28,123456,Alex,Murphy,M,56,+919988998878,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Dentist,0
+29,123456,Ananya,Srivastav,M,34,+912938883904,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Dermatologist,0
