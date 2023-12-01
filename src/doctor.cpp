@@ -419,6 +419,7 @@ void doctor::removePerson()
     return;
 }
 void doctor::printprescription(){
+    
     cout<<"Enter doctor ID: ";
     int did;
     cin>>did;
@@ -438,7 +439,7 @@ void doctor::printprescription(){
         if(i.second.D.id==did){
             cout<<endl;
             i.second.printDetails();cout<<endl;
-            //return;
+            
         }
     }
     
