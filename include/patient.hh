@@ -18,6 +18,7 @@ private:
     friend class appointment;
     friend class bed;
     friend class hospital;
+    friend class prescription;
     
 public:
     patient();
@@ -31,5 +32,6 @@ public:
     void hospitalize();
     void reportADeath();
     void removePerson();
+    void printprescription();
 };
 #endif // !PATIENT

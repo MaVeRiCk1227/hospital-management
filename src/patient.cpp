@@ -123,7 +123,7 @@ void patient::addPerson()
 }
 void patient::printDetails()
 {
-    if (id == -1)
+    if (id == 0)
         return;
     person::printDetails();
     cout << "Height (cms)    : " << height << "\n";
@@ -197,6 +197,10 @@ void patient::getDetails(int rec)
         int reqId;
         cout << "\nEnter ID:\n";
         cin >> reqId;
+        if(reqId==0){
+            cout<<"Invalid ID!\n";
+            return;
+        }
         if (hospital::patientsList.find(reqId) != hospital::patientsList.end()){
             cout<<"Please enter your password: ";
             string pw;
@@ -521,6 +525,33 @@ void patient::removePerson()
     return;
 }
 
+void patient::printprescription(){
+    cout<<"Enter patient ID: ";
+    int pid;
+    cin>>pid;
+    if(pid<1||hospital::patientsList.find(pid)==hospital::patientsList.end()){
+        cout<<"Patient not found!\n";
+        return;
+    }
+    cout<<"Enter patient password: ";
+    string pw;
+    cin>>pw;
+    if(pw!=hospital::patientsList[pid].password){
+        cout<<"Wrong password.\n";
+        return;
+    }
+    cout<<"Here are the prescriptions of the patient \n";
+    for(auto i:hospital::prescriptionsList){
+        if(i.second.P.id==pid){
+            cout<<endl;
+            i.second.printDetails();cout<<endl;
+            //return;
+        }
+    }
+    
+    return;
+
+}
 // Removing a patient: it's rather "DISCHARGING a HOSPITALIZED patient";
 // If a patient wasn't hospitalized, just came to the hospital for an appointment with;
 // a doctor then that appointment object will be cleared on the next day automatically;

@@ -72,7 +72,7 @@ void bed::saveMap()
 }
 void bed::printDetails()
 {
-    if(id==-1)return;
+    if(id<=0)return;
     cout << "Bed ID: " << id << "\n";
     cout << "Patient ID: " << pid << "\n";
     cout << "Nurse ID: " << nid << "\n";
@@ -81,29 +81,30 @@ void bed::printDetails()
 }
 void bed::book()
 {
-    //int id;
-    
-    
+    if (id>10)
+        return void(cout << "Sorry, the beds is full.\n");
+    cout << "Enter patient ID: \n";
+   
+    cin >> pid;
+
+    if (hospital::patientsList.find(pid) == hospital::patientsList.end())
+        return void(cout << "Sorry, no such patient exists.\n");
     for(auto i:hospital::bedsList){
-        
+        if(i.second.pid==P.id){
+            cout<<"You are already hospitalized.\n";
+            return;
+        }
         if(i.second.occupied==0){
             id=i.first;
             break;
         }
         
         
-    }
-    
-    if (id>10)
-        return void(cout << "Sorry, the beds is full.\n");
-    cout << "Enter patient ID: \n";
-    int pid;
-    cin >> pid;
-    if (hospital::patientsList.find(pid) == hospital::patientsList.end())
-        return void(cout << "Sorry, no such patient exists.\n");
+    }    
     P = hospital::patientsList[pid];
+    hospital::patientsList[pid].bedID=id;
     cout << "Enter nurse ID: \n";
-    int nid;
+    
     cin >> nid;
     if (hospital::nursesList.find(nid) == hospital::nursesList.end())
         return void(cout << "Sorry, no such nurse exists.\n");
@@ -124,8 +125,9 @@ void bed::unhospitalize()
         cout<<"No such bed exists.\n";
         return;        
     }
-    else if(!hospital::bedsList[id].occupied){
+    else if(hospital::bedsList[id].occupied){
         hospital::bedsList[id].occupied=0;
+        hospital::patientsList[hospital::bedsList[id].pid].bedID=0;
         hospital::bedsList[id].P.id=-1;
         hospital::bedsList[id].N.id=-1;
     }

@@ -100,7 +100,7 @@ void driver::addPerson()
 }
 void driver::printDetails()
 {
-    if (id == -1)
+    if (id == 0)
         return;
     person::printDetails();
     cout << "License Number  : " << licenseNumber << "\n";

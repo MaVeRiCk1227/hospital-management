@@ -12,6 +12,8 @@ using namespace std;
 #include "./ambulance.hh"
 #include "./appointment.hh"
 #include "./bed_manage.hh"
+#include "./medicine.hh"
+#include "./prescription.hh"
 
 class hospital
 {
@@ -25,6 +27,8 @@ private:
     static map<int, appointment> appointmentsList;
     static map<int, appointment> online_appointmentsList;
     static map<int, bed> bedsList;
+    static map<int, medicine> medicinesList;
+    static map<int, prescription> prescriptionsList;
 
     static string admin_chief[3];
     static string admin_patient[3];
@@ -48,6 +52,8 @@ private:
     friend class ambulance;
     friend class appointment;
     friend class bed;
+    friend class medicine;
+    friend class prescription;
 
 public:
     static void printDoctors();
@@ -59,6 +65,8 @@ public:
     static void printBeds();
     static void fill_admin();
     static void reset_passwords();
+    static void printMedicine();
+    static void printPrescription();
 };
 
 #endif // !HOSPITAL

@@ -18,6 +18,7 @@ using namespace std;
 #include "./include/driver.hh"
 #include "./include/ambulance.hh"
 #include "./include/bed_manage.hh"
+#include "./include/medicine.hh"
 
 void appointmentsMenu();
 void patientsMenu();
@@ -25,6 +26,9 @@ void doctorsMenu();
 void nursesMenu();
 void driversMenu();
 void ambulancesMenu();
+void bedmanageMenu();
+void medandpreMenu();
+
 
 void appointmentsMenu()
 {
@@ -107,7 +111,8 @@ void patientsMenu()
         cout << "[04] : Report a patient's death\n";
         cout << "[05] : Discharge a patient or their body\n";
         cout << "[06] : Fetch patient details from history\n";
-        cout << "[07] : Get details of all registered patients\n\n";
+        cout << "[07] : Get details of all registered patients\n";
+        cout << "[08] : Get details of all prescriptions\n\n";
         cout << "[-1] : Back\n";
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
         cout << "Enter your choice: ";
@@ -146,8 +151,12 @@ void patientsMenu()
         }
         else if (purpose == 7)
         {
-            cout<<"here\n";
+            //cout<<"here\n";
             hospital::printPatients();
+        }
+        else if(purpose==8){
+            patient p;
+            p.printprescription();
         }
         else if (purpose == -1)
         {
@@ -186,7 +195,8 @@ void doctorsMenu()
         cout << "[02] : Get doctor details\n";
         cout << "[03] : Remove a doctor\n";
         cout << "[04] : Fetch doctor details from history\n";
-        cout << "[05] : Get details of all registered doctors\n\n";
+        cout << "[05] : Get details of all registered doctors\n";
+        cout << "[06] : Get details of all prescriptions\n\n";
         cout << "[-1] : Back\n";
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
         cout << "Enter your choice: ";
@@ -217,6 +227,11 @@ void doctorsMenu()
         {
             hospital::printDoctors();
         }
+        else if(purpose==6){
+            doctor d;
+            d.printprescription();
+        }
+       
         else if (purpose == -1)
         {
             exit = true;
@@ -254,7 +269,8 @@ void nursesMenu()
         cout << "[02] : Get nurse details\n";
         cout << "[03] : Remove a nurse\n";
         cout << "[04] : Fetch nurse details from history\n";
-        cout << "[05] : Get details of all registered nurses\n\n";
+        cout << "[05] : Get details of all registered nurses\n";
+        cout << "[06] : Get details of all beds need to look after\n\n";
         cout << "[-1] : Back\n";
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
         cout << "Enter your choice: ";
@@ -284,6 +300,10 @@ void nursesMenu()
         else if (purpose == 5)
         {
             hospital::printNurses();
+        }
+        else if(purpose==6){
+            nurse n;
+            n.lookForBed();
         }
         else if (purpose == -1)
         {
@@ -467,7 +487,7 @@ void bedmanageMenu(){
         cout << "[01] : hospitalize a patient\n";
         cout << "[02] : unhospitalize a patient\n";
         cout << "[03] : Get bed details\n";
-        cout << "[04] : Get details of all registered ambulances\n\n";
+        cout << "[04] : Get details of all registered beds\n\n";
         cout << "[-1] : Back\n";
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
         cout << "Enter your choice: ";
@@ -491,6 +511,67 @@ void bedmanageMenu(){
         }
         else if(purpose==4){
             hospital::printBeds();
+        }
+        
+        else if (purpose == -1)
+        {
+            exit = true;
+            break;
+        }
+        else
+        {
+            cout << "Invalid choice!\n";
+        }
+
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // clearing cin buffer;
+
+        cout << endl;
+        cout << "\nPress ENTER to continue...\n";
+        cout << endl;
+
+        getchar();
+    }
+    return;
+}
+void medandpreMenu(){
+    bool exit = false;
+    while (!exit)
+    {
+        int purpose = 0;
+        cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+        cout << "\nSelect an option:\n\n";
+
+        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+        cout << "./HOME/MEDCINE AND PRESCRIPTION\n";
+        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+        cout << "[01] : show all medicine\n";
+        cout << "[02] : prescrip for a patient\n";
+        cout << "[03] : get prescription details\n";
+        cout << "[04] : Get details of all registered prescriptions\n\n";
+        cout << "[-1] : Back\n";
+        cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
+        cout << "Enter your choice: ";
+        cin >> purpose;
+
+        if (purpose == 1)
+        {
+            hospital::printMedicine();
+        }
+        else if (purpose == 2)
+        {
+            prescription p;
+            p.prescript();
+        }
+        else if (purpose == 3)
+        {
+            prescription p;
+            
+            p.printDetails();
+
+        }
+    
+        else if(purpose==4){
+            hospital::printPrescription();
         }
         
         else if (purpose == -1)
@@ -588,6 +669,11 @@ int main()
         a2.fillMap();
         bed b;
         b.fillMap();
+
+        medicine m;
+        m.fillMap();
+        prescription p1;
+        p1.fillMap();
         hospital::fill_admin();
         // NOTE:
         // fill drivers' Map before ambulances' Map;
@@ -609,7 +695,8 @@ int main()
         cout << "[05] : DRIVERS\n";
         cout << "[06] : AMBULANCES\n";
         cout << "[07] : BED MANAGEMENT\n";
-        cout << "[08] : RESET PASSWORDS\n\n";
+        cout << "[08] : RESET PASSWORDS\n";
+        cout << "[09] : MEDICINE and PRESCRIPTION\n\n";
         cout << "[-1] : EXIT\n";
         cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n";
         cout << "Enter your choice: ";
@@ -653,6 +740,9 @@ int main()
         else if(category==8){
             hospital::reset_passwords();
         }
+        else if(category == 9){
+            medandpreMenu();
+        }
         else
         {
             cout << "\nInvalid Choice!\n";
@@ -676,6 +766,10 @@ int main()
         a1.saveMap();
         a2.saveMap();
         b.saveMap();
+        medicine m;
+        m.saveMap();
+        prescription p1;
+        p1.saveMap();
     }
 
     return 0;

@@ -105,7 +105,7 @@ void doctor::addPerson()
 }
 void doctor::printDetails()
 {
-    if (id == -1)
+    if (id == 0)
         return;
     person::printDetails();
     cout << "Type            : " << type << "\n";
@@ -417,4 +417,31 @@ void doctor::removePerson()
     rename("./data/temp.csv", "./data/doctorsHistory.csv");
     cout << firstName << " " << lastName << " removed successfully!\n";
     return;
+}
+void doctor::printprescription(){
+    cout<<"Enter doctor ID: ";
+    int did;
+    cin>>did;
+    if(did<1||hospital::patientsList.find(did)==hospital::patientsList.end()){
+        cout<<"Doctor not found!\n";
+        return;
+    }
+    cout<<"Enter doctor password: ";
+    string pw;
+    cin>>pw;
+    if(pw!=hospital::doctorsList[did].password){
+        cout<<"Wrong password.\n";
+        return;
+    }
+    cout<<"Here are the prescriptions of the doctor \n";
+    for(auto i:hospital::prescriptionsList){
+        if(i.second.D.id==did){
+            cout<<endl;
+            i.second.printDetails();cout<<endl;
+            //return;
+        }
+    }
+    
+    return;
+
 }

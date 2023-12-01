@@ -10,6 +10,8 @@ using namespace std;
 #include "./../include/ambulance.hh"
 #include "./../include/appointment.hh"
 #include "./../include/hospital.hh"
+#include "./../include/bed_manage.hh"
+#include "./../include/medicine.hh"
 
 //defining already declared static members in the global scope;
 
@@ -21,6 +23,8 @@ map<int, ambulance> hospital::ambulancesList;
 map<int, appointment> hospital::appointmentsList;
 map<int, appointment> hospital::online_appointmentsList;
 map<int, bed> hospital::bedsList;
+map<int, medicine> hospital::medicinesList;
+map<int, prescription> hospital::prescriptionsList;
 
 string hospital::admin_chief[3];
 string hospital::admin_patient[3];
@@ -496,4 +500,43 @@ void hospital::reset_passwords(){
     }
     return;
 
+}
+void hospital::printMedicine(){
+    string admin_name;
+    string admin_pw;
+    cout<<"Please get the admin root firstly.\n";
+    cout<<"Enter admin name: \n";
+    cin>>admin_name;
+    cout<<"Enter admin password: \n";
+    cin>>admin_pw;
+    if(admin_name==hospital::admin_chief[0]&&admin_pw==hospital::admin_chief[1]){
+        cout<<"Welcome to the admin root.\n";
+        cout<<"Here are all the medicines:\n\n";
+        for (auto i : medicinesList)
+            i.second.printDetails(), cout << "\n\n";
+        return;
+    }
+    else{
+        cout<<"Wrong admin name or password.\n";
+    }
+}
+
+void hospital::printPrescription(){
+    string admin_name;
+    string admin_pw;
+    cout<<"Please get the admin root firstly.\n";
+    cout<<"Enter admin name: \n";
+    cin>>admin_name;
+    cout<<"Enter admin password: \n";
+    cin>>admin_pw;
+    if(admin_name==hospital::admin_chief[0]&&admin_pw==hospital::admin_chief[1]){
+        cout<<"Welcome to the admin root.\n";
+        cout<<"Here are all the prescriptions:\n\n";
+        for (auto i : prescriptionsList)
+            i.second.printDetails(), cout << "\n\n";
+        return;
+    }
+    else{
+        cout<<"Wrong admin name or password.\n";
+    }
 }

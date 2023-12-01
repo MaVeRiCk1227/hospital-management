@@ -1,7 +1,7 @@
 doctorId,password,firstName,lastName,gender,age,mobNumber,address,type,appointmentsBooked
-1,123456,John,Doe,M,43,+918765908974,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Cardiologist,1
+1,123456,John,Doe,M,43,+918765908974,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Cardiologist,0
 2,123456,Isabella,Cullen,F,28,+917645903894,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Physician,0
-3,123456,Rhea,Jain,F,29,+918930281749,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Cardiologist,1
+3,123456,Rhea,Jain,F,29,+918930281749,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Cardiologist,0
 4,123456,Dhananjay,Dey,M,44,+919248930238,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Psychatrist,0
 5,123456,James,Carwin,M,38,+912849302394,143^ Municipal Indl Estate^ Worli``Mumbai`Maharashtra`400018`India,Neurologist,0
 7,123456,Mark,Andrew,M,32,+912394048304,23-D^ Dazllia Street``Mumbai`Maharashtra`400011`India,Psychatrist,0

@@ -14,6 +14,7 @@ private:
     friend class appointment;
     string password;
     friend class hospital;
+    friend class prescription;
 public:
     doctor();
     void fillMap();
@@ -24,5 +25,6 @@ public:
     void getDetails(int rec = 0);
     void getDetailsFromHistory();
     void removePerson();
+    void printprescription();
 };
 #endif // !DOCTOR

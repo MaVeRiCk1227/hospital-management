@@ -103,7 +103,7 @@ void nurse::addPerson()
 }
 void nurse::printDetails()
 {
-    if (id == -1)
+    if (id == 0)
         return;
     person::printDetails();
     cout << "Type            : " << type << "\n";
@@ -425,7 +425,7 @@ void nurse::lookForBed()
     cin >> nid;
     cout << "\nHere are the beds you need to look after.\n";
     for(auto i:hospital::bedsList){
-        if(i.second.N.id==nid){
+        if(i.second.N.id==nid&&i.second.occupied==1){
             i.second.printDetails();
             cout<<"\n";
         }
